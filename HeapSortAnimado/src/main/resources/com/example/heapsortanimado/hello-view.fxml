@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="672.0" maxWidth="999.0" minHeight="672.0" minWidth="900.0" prefHeight="672.0" prefWidth="999.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.heapsortanimado.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <HBox prefHeight="651.0" prefWidth="860.0">
+      <children>
+         <VBox prefHeight="632.0" prefWidth="601.0">
+            <children>
+               <HBox id="vetor" fx:id="vetor" prefHeight="44.0" prefWidth="600.0">
+                  <children>
+                     <Label fx:id="label0" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="00">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="01">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label2" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="02">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label3" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="03">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label4" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="04">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label5" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="05">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label6" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="06">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label7" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="07">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label8" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="08">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label9" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="09">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label10" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="10">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label11" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="11">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label12" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="12">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label13" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="13">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="label14" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: black;" text="14">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox prefHeight="35.0" prefWidth="596.0">
+                  <children>
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="0" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="1" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="2" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="3" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="4" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="5" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="6" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="7" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="8" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="9" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="10" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="11" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="12" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="13" />
+                     <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="14" />
+                  </children>
+               </HBox>
+               <Pane prefHeight="587.0" prefWidth="600.0">
+                  <children>
+                     <Circle fx:id="c9" fill="DODGERBLUE" layoutX="166.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c11" fill="DODGERBLUE" layoutX="326.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Label alignment="CENTER" layoutX="277.0" layoutY="113.0" prefHeight="20.0" prefWidth="20.0" text="0" />
+                     <Circle fx:id="c14" fill="DODGERBLUE" layoutX="566.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c10" fill="DODGERBLUE" layoutX="246.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c12" fill="DODGERBLUE" layoutX="407.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c13" fill="DODGERBLUE" layoutX="486.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c8" fill="DODGERBLUE" layoutX="86.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c7" fill="DODGERBLUE" layoutX="7.0" layoutY="450.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c0" fill="DODGERBLUE" layoutX="286.0" layoutY="88.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c3" fill="DODGERBLUE" layoutX="47.0" layoutY="327.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c6" fill="DODGERBLUE" layoutX="526.0" layoutY="327.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c2" fill="DODGERBLUE" layoutX="446.0" layoutY="178.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c1" fill="DODGERBLUE" layoutX="126.0" layoutY="178.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c4" fill="DODGERBLUE" layoutX="206.0" layoutY="327.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Circle fx:id="c5" fill="DODGERBLUE" layoutX="366.0" layoutY="327.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                     <Line endX="-3.0517578125E-5" endY="19.999984741210938" layoutX="286.0" layoutY="88.0" startX="-160.0" startY="69.99998474121094" />
+                     <Line endX="-9.292938232421875" endY="9.999984741210938" layoutX="295.0" layoutY="98.0" startX="149.99996948242188" startY="59.99998474121094" />
+                     <Line endX="-170.0" endY="100.0" layoutX="296.0" layoutY="98.0" startX="-248.0" startY="208.4000244140625" />
+                     <Line endX="-169.29290771484375" endY="99.29290771484375" layoutX="296.0" layoutY="98.0" startX="-90.39999389648438" startY="210.0" />
+                     <Line endX="149.99996948242188" endY="100.0" layoutX="296.0" layoutY="98.0" startX="69.99996948242188" startY="209.0" />
+                     <Line endX="149.99996948242188" endY="100.0" layoutX="296.0" layoutY="98.0" startX="230.0" startY="209.0" />
+                     <Line endX="-100.00003051757812" endY="239.0" layoutX="306.0" layoutY="108.0" startX="-140.0" startY="322.0" />
+                     <Line endX="-100.00003051757812" endY="239.0" layoutX="306.0" layoutY="108.0" startX="-60.000030517578125" startY="322.0" />
+                     <Line endX="-272.0" endY="230.0" layoutX="316.0" layoutY="118.0" startX="-308.8000183105469" startY="313.20001220703125" />
+                     <Line endX="-279.0" endY="219.0" layoutX="326.0" layoutY="128.0" startX="-240.0" startY="302.0" />
+                     <Line endX="9.999969482421875" endY="312.0" layoutX="316.0" layoutY="118.0" startX="44.800018310546875" startY="229.0" />
+                     <Line endX="49.999969482421875" endY="229.0" layoutX="316.0" layoutY="118.0" startX="89.99996948242188" startY="312.0" />
+                     <Line endX="200.0" endY="219.0" layoutX="326.0" layoutY="128.0" startX="159.99996948242188" startY="302.0" />
+                     <Line endX="200.0" endY="219.0" layoutX="326.0" layoutY="128.0" startX="240.0" startY="302.0" />
+                     <Label fx:id="no0" alignment="CENTER" layoutX="275.0" layoutY="78.0" prefHeight="20.0" prefWidth="20.0" text="0">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no1" alignment="CENTER" layoutX="115.0" layoutY="168.0" prefHeight="20.0" prefWidth="20.0" text="1">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no2" alignment="CENTER" layoutX="437.0" layoutY="168.0" prefHeight="20.0" prefWidth="20.0" text="2">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no3" alignment="CENTER" layoutX="37.0" layoutY="317.0" prefHeight="20.0" prefWidth="20.0" text="3">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no4" alignment="CENTER" layoutX="197.0" layoutY="317.0" prefHeight="20.0" prefWidth="20.0" text="4">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no5" alignment="CENTER" layoutX="356.0" layoutY="317.0" prefHeight="20.0" prefWidth="20.0" text="5">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no6" alignment="CENTER" layoutX="517.0" layoutY="317.0" prefHeight="20.0" prefWidth="20.0" text="6">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no7" alignment="CENTER" layoutX="-3.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="7">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no8" alignment="CENTER" layoutX="76.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="8">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no9" alignment="CENTER" layoutX="156.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="9">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no10" alignment="CENTER" layoutX="237.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="10">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no11" alignment="CENTER" layoutX="316.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="11">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no12" alignment="CENTER" layoutX="397.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="12">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no13" alignment="CENTER" layoutX="476.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="13">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="no14" alignment="CENTER" layoutX="557.0" layoutY="440.0" prefHeight="20.0" prefWidth="20.0" text="14">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="117.0" layoutY="211.0" prefHeight="20.0" prefWidth="20.0" text="1" />
+                     <Label alignment="CENTER" layoutX="437.0" layoutY="211.0" prefHeight="20.0" prefWidth="20.0" text="2" />
+                     <Label alignment="CENTER" layoutX="36.0" layoutY="357.0" prefHeight="20.0" prefWidth="20.0" text="3" />
+                     <Label alignment="CENTER" layoutX="197.0" layoutY="357.0" prefHeight="20.0" prefWidth="20.0" text="4" />
+                     <Label alignment="CENTER" layoutX="355.0" layoutY="357.0" prefHeight="20.0" prefWidth="20.0" text="5" />
+                     <Label alignment="CENTER" layoutX="517.0" layoutY="357.0" prefHeight="20.0" prefWidth="20.0" text="6" />
+                     <Label alignment="CENTER" layoutX="-3.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="7" />
+                     <Label alignment="CENTER" layoutX="77.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="8" />
+                     <Label alignment="CENTER" layoutX="155.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="9" />
+                     <Label alignment="CENTER" layoutX="236.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="10" />
+                     <Label alignment="CENTER" layoutX="316.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="11" />
+                     <Label alignment="CENTER" layoutX="397.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="12" />
+                     <Label alignment="CENTER" layoutX="476.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="13" />
+                     <Label alignment="CENTER" layoutX="557.0" layoutY="470.0" prefHeight="20.0" prefWidth="20.0" text="14" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="16.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: yellow;" width="138.0" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="16.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: darkgray;" width="138.0" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="16.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: lightgray;" width="138.0" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="16.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #E9967A;" width="138.0" />
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="16.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: green;" width="138.0" />
+                     <Label layoutX="79.0" layoutY="24.0" text="Pai" />
+                     <Label layoutX="56.0" layoutY="44.0" text="Filho Esquerdo" />
+                     <Label layoutX="63.0" layoutY="60.0" text="Filho Direito" />
+                     <Label layoutX="29.0" layoutY="80.0" text="Troca MaiorF com Pai" />
+                     <Label layoutX="59.0" layoutY="100.0" text="Ordenado" />
+                     <Label layoutX="64.0" layoutY="6.0" text="Legenda" />
+                  </children>
+               </Pane>
+            </children>
+         </VBox>
+         <VBox fx:id="codigoContainer" prefHeight="622.0" prefWidth="349.0" style="-fx-border-color: black;">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </VBox>
+      </children>
+   </HBox>
+</VBox>
