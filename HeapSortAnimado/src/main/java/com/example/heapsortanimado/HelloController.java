@@ -2,6 +2,8 @@ package com.example.heapsortanimado;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -134,6 +136,22 @@ public class HelloController {
             nos[elemento].setText(texto);
         } else {
             System.out.println("Tentativa de acessar nó inválido");
+        }
+    }
+
+    @FXML
+    public void AlterarTextoVet(int elemento, String texto){
+        if (elemento >= 0 && elemento < labels.length) {
+            labels[elemento].setText(texto);
+        } else {
+            System.out.println("Tentativa de acessar nó inválido");
+        }
+    }
+
+    @FXML
+    public void AtualizaTextos(){
+        for(int i=0; i<labels.length; i++){
+            labels[i].setText(nos[i].getText());
         }
     }
 
@@ -278,7 +296,7 @@ public class HelloController {
         }
     }
 
-    // Método para destacar múltiplas linhas
+    // Destaca várias linhas se precisar
     public void destacarLinhas(int... indices) {
         // Remove o destaque anterior
         limparDestaques();
@@ -294,7 +312,6 @@ public class HelloController {
         }
     }
 
-    // Método para limpar os destaques das linhas
     public void limparDestaques() {
         for (Label linha : linhasAtuais) {
             linha.setStyle("-fx-font-family: 'Consolas'; -fx-font-size: 14px; -fx-padding: 2;");
@@ -302,7 +319,6 @@ public class HelloController {
         linhasAtuais.clear();
     }
 
-    // Método para simular execução linha por linha
     public void simularExecucao() {
         int[] passoAtual = {0}; // Para capturar a referência no lambda
 
@@ -315,5 +331,84 @@ public class HelloController {
 
         timeline.setCycleCount(codigoContainer.getChildren().size());
         timeline.play();
+    }
+
+    public void animarTrocaNos(int i, int j, Runnable onFinished) {
+        if (i >= 0 && j >= 0 && i < circles.length && j < circles.length){
+            Circle c1 = circles[i];
+            Circle c2 = circles[j];
+
+            Label n1 = nos[i];
+            Label n2 = nos[j];
+
+            double x1 = c1.getLayoutX();
+            double y1 = c1.getLayoutY();
+            double x2 = c2.getLayoutX();
+            double y2 = c2.getLayoutY();
+
+            Task<Void> task = new Task<>() {
+                @Override
+                protected Void call() {
+                    int steps = 20;
+                    double aux = 1.5;
+                    double dx = (x2 - x1) / steps;
+                    double dy = (y2 - y1) / steps + aux;
+
+                    for (int step = 0; step < steps; step++) {
+                        Platform.runLater(() -> {
+                            c1.setLayoutY(c1.getLayoutY() - aux);
+                            n1.setLayoutY(n1.getLayoutY() - aux);
+
+                            c2.setLayoutY(c2.getLayoutY() + aux);
+                            n2.setLayoutY(n2.getLayoutY() + aux);
+                        });
+                        try { Thread.sleep(25); } catch (InterruptedException e) { e.printStackTrace(); }
+                    }
+
+                    for (int step = 0; step < steps; step++) {
+                        Platform.runLater(() -> {
+                            c1.setLayoutX(c1.getLayoutX() + dx);
+                            n1.setLayoutX(n1.getLayoutX() + dx);
+
+                            c2.setLayoutX(c2.getLayoutX() - dx);
+                            n2.setLayoutX(n2.getLayoutX() - dx);
+                        });
+                        try { Thread.sleep(25); } catch (InterruptedException e) { e.printStackTrace(); }
+                    }
+
+                    for (int step = 0; step < steps; step++) {
+                        Platform.runLater(() -> {
+                            c1.setLayoutY(c1.getLayoutY() + dy);
+                            n1.setLayoutY(n1.getLayoutY() + dy);
+
+                            c2.setLayoutY(c2.getLayoutY() - dy);
+                            n2.setLayoutY(n2.getLayoutY() - dy);
+                        });
+                        try { Thread.sleep(25); } catch (InterruptedException e) { e.printStackTrace(); }
+                    }
+
+
+                    Platform.runLater(() -> {
+                        Circle tempC = circles[i];
+                        circles[i] = circles[j];
+                        circles[j] = tempC;
+
+                        Label tempN = nos[i];
+                        nos[i] = nos[j];
+                        nos[j] = tempN;
+
+                        //trocando as informações dos nós
+                        AtualizaTextos();
+//                        Label tempL = labels[i];
+//                        labels[i] = labels[j];
+//                        labels[j] = tempL;
+
+                        if (onFinished != null) onFinished.run();
+                    });
+                    return null;
+                }
+            };
+            new Thread(task).start();
+        }
     }
 }
