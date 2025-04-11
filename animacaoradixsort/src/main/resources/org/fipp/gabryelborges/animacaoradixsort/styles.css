@@ -1,0 +1,9 @@
+.pane{
+    -fx-background-color: #60bacd;
+}
+
+
+.botao-vetor{
+    -fx-background-color: white;
+    -fx-text-fill: darkblue;
+}
